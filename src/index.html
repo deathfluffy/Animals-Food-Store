@@ -1,14 +1,1042 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Animals Foood Store</title>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <div class="container-logo">
+            <a
+              class="header-logo"
+              href="./index.html"
+              aria-label="Home website"
+            >
+              <svg class="header-logo" width="170" height="65">
+                <use href="./img/icons.svg#icon-dogcat"></use>
+              </svg>
+            </a>
+          </div>
+          <ul class="header-list">
+            <li>
+              <a class="home-button" href="./index.html" aria-label="Home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a arial-label="Basket" class="cart-button-container">
+                <div class="cart-button">
+                  <svg class="cart-icon" width="14" height="14">
+                    <use href="./img/icons.svg#icon-shopping-cart"></use>
+                  </svg>
+
+                  <div class="mobile-cart-text">
+                    <span class="cart-item-count">0</span>
+                  </div>
+                </div>
+
+                <span class="cart-text">
+                  CART (<span class="cart-item-count">0</span>)
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-text-container">
+            <h1 class="hero-title">
+              Ласкаво просимо у світ стильних аксесуарів для ваших улюбленців!
+            </h1>
+            <p class="hero-paragraph">
+              Ми — команда любителів тварин, і наша пристрасть до домашніх
+              тварин надихнула нас на створення колекції унікальних і якісних
+              аксесуарів для собак і котів.
+            </p>
+          </div>
+          <div class="hero-container">
+            <img
+              src="./img/hero/hero.jpg"
+              class="hero-image"
+              alt="dog-and-cat"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="filters" id="filters">
+        <div class="container">
+          <h2 class="title-filter">Filters:</h2>
+          <form class="search-form">
+            <div class="input-container">
+              <input
+                type="text"
+                name="keyword"
+                class="input-modal-subscribe"
+                placeholder="Search for anything"
+                id="search-item"
+              />
+              <svg
+                width="20"
+                height="20"
+                class="icon-search container-search-everything"
+                id="search-icon"
+              >
+                <use href="./img/icons.svg#icon-search"></use>
+              </svg>
+            </div>
+            <div class="select-menu-category">
+              <div class="select-btn-custom" id="category">
+                <span class="sBtn-text-select">Categories</span>
+                <svg
+                  width="20"
+                  height="20"
+                  class="icon-arrow-down container-arrow-category"
+                >
+                  <use href="./img/icons.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="select-menu" id="sort">
+              <div class="select-btn">
+                <span class="sBtn-text">A to Z</span>
+                <svg
+                  width="20"
+                  height="20"
+                  class="icon-arrow-down container-arrow"
+                >
+                  <use href="./img/icons.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="all-products" id="all-products">
+        <div class="container">
+          <div class="page">
+            <ul class="product-list-product__list">
+              <li data-num="1" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/234435.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">
+                    Гель для полости рта
+                  </h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>46782</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ProVET</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li data-num="2" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/472253.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Фитокомплекс</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>356328</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ProVET</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li data-num="3" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/65958210.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Пелёнки для собак</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>21679</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Trixie</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: red">немає</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li data-num="4" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/576317.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Спрей-отпугиватель</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>23175</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ProVET</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="5" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/6666262.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Шлея</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>132568</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>GimDog</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="6" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/43473814704969.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Сумка для лакомств</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>142567</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Trixie</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="7" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/68735783577.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Коврик-кормушка</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>32312</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>WahoPet licky</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="8" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/553151354311.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Лебедь</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>123568</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Eastland</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product">350грн</p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li data-num="9" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/4351661.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">
+                    Колтунорез-стриппинг
+                  </h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>12235</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Trixie</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: red">немає</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="10" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/37744326722067.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Когтеточка-столбик</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>25237</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Мишка</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="11" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/09262217.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">
+                    Когтеточка картонная
+                  </h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>18477</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Eastland</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="12" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/8129364.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Двери</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>27636</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Trixie</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: red">Немає</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="13" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/31376209039547.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Мышка с пищалкой</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>193147</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Comfy</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="14" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/56712110770458.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Рюкзак-переноска</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>35780</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Trixie</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: red">Немає</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="15" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/411241.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Свитер</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>67325</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ТОМ</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="16" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/52369.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Пробиотик</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>73194</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ProPlan Fortiflora</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="17" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/8948873.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Наполнитель</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>485330</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>Biokat's</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li data-num="18" class="product-list-product__card num">
+                <div class="product-list-box__img">
+                  <img
+                    class="product-list-card__image"
+                    src="./img/products/44571.png"
+                    width="140"
+                    height="140"
+                  />
+                </div>
+                <div class="product-list-info__box">
+                  <h3 class="product-list-name__product">Лосьон для глаз</h3>
+                  <div class="product-list-info">
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Артикул:</span>
+                      <span>95435</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Бренд:</span>
+                      <span>ProVET</span>
+                    </p>
+                    <p class="product-list-info__item">
+                      <span class="product-list-span__text">Наявність:</span>
+                      <span style="color: #2ac92a">Присутній</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="product-list-price__btn">
+                  <p class="product-list-price__product"></p>
+                  <button
+                    type="button"
+                    class="product-list-button__card"
+                    arial-label="product button"
+                  >
+                    <svg class="product-list-icon__btn" width="18" heigth="18">
+                      <use href="./img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="paginator" onclick="pagination(event)"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-tablet">
+          <div class="footer-logo-and-social-list">
+            <a aria-label="Hidden icon" href="./index.html"
+              ><svg class="footer-icon">
+                <use href="./img/icons.svg#icon-logo-footer"></use>
+              </svg>
+            </a>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  aria-label="Facebook"
+                  href="./index.html"
+                  class="social-list-link"
+                  target="_blank"
+                  ><svg class="social-list-icon">
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Instagram"
+                  href="./index.html"
+                  class="social-list-link"
+                  target="_blank"
+                  ><svg class="social-list-icon">
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Youtube"
+                  href="./index.html"
+                  class="social-list-link"
+                  target="_blank"
+                  ><svg class="social-list-icon">
+                    <use href="./img/icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-laptop-section">
+            <div class="footer-text-section">
+              <h3 class="footer-tagline">
+                Discover the Variety of Flavors and Quality
+              </h3>
+
+              <p class="footer-section-description">
+                An online store where you will find fresh, natural and delicious
+                products for a healthy life and unforgettable gastronomic
+                adventures.
+              </p>
+            </div>
+            <div>
+              <p class="footer-subscribe">
+                Subscribe and learn about new products!
+              </p>
+
+              <form class="footer-subscribe-form">
+                <label>
+                  <input
+                    class="subscribe-form-input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+                    required
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  class="footer-subscribe-btn"
+                  aria-label="email subscribe"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-tablet-bottom-text">
+          <p class="footer-bottom-text">Food Boutique. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a
+              aria-label="privacy policy"
+              href="#privacy-policy"
+              class="footer-bottom-link js-modal-policy-open"
+              >Privacy Policy</a
+            >
+            <span class="footer-bottom-link">/</span>
+            <a
+              aria-label="terms of service"
+              href="#terms-of-service"
+              class="footer-bottom-link js-modal-terms-open"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL POLICY AND TEAMS -->
+      <div
+        class="modal-policy-container is-hidden-policy js-policy"
+        id="#privacy-policy"
+      >
+        <div class="modal-privacy-policy">
+          <button
+            type="button"
+            class="policy-btn js-policy-close"
+            aria-label="close privacy policy"
+            data-modal-policy-close
+          >
+            <svg class="policy-btn-close-icon">
+              <use href="./img/icons.svg#icon-x-close"></use>
+            </svg>
+          </button>
+          <div class="privacy-policy-content">
+            <svg class="footer-icon">
+              <use href="./img/icons.svg#icon-logo-footer"></use>
+            </svg>
+            <h2 class="policy-name">Privacy Policy</h2>
+            <p class="policy-users">Greetings Users,</p>
+            <p class="policy-text">
+              Welcome, here is our policy on privacy. This policy sets out how
+              Food Boutique collects and uses the information that we collect
+              about you when you use the Service. This policy also explains the
+              choices that you can make about the way that we use your
+              information.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal-policy-container is-hidden-policy js-terms"
+        id="#terms-of-service"
+      >
+        <div class="modal-privacy-policy">
+          <button
+            type="button"
+            class="policy-btn js-terms-close"
+            aria-label="close terms of service"
+            data-modal-policy-close
+          >
+            <svg class="policy-btn-close-icon">
+              <use href="./img/icons.svg#icon-x-close"></use>
+            </svg>
+          </button>
+          <div class="privacy-policy-content">
+            <svg class="footer-icon">
+              <use href="./img/icons.svg#icon-logo-footer"></use>
+            </svg>
+            <h2 class="policy-name">Terms Of Service</h2>
+            <p class="policy-users">Greetings Users,</p>
+            <p class="policy-text">
+              A terms of service sets all user rules, restrictions, and
+              prohibited behaviors, and outlines your company’s liability
+              limitations, property rights, and dispute resolutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL SUBSCRIBE -->
+    <div class="modal-subscribe-container is-hidden-subscribe js-subscribe">
+      <div class="modal-subscribe">
+        <button
+          type="button"
+          class="subscribe-btn js-subscribe-close"
+          aria-label="close modal window subscribe"
+          data-modal-subscribe-close
+        >
+          <svg class="policy-btn-close-icon">
+            <use href="./img/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <div class="subscribe-content">
+          <svg class="footer-icon">
+            <use href="./img/icons.svg#icon-logo-footer"></use>
+          </svg>
+          <p class="subscribe-text"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/pagination.js"></script>
   </body>
 </html>

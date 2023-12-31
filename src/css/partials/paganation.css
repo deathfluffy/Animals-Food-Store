@@ -1,0 +1,44 @@
+.num {
+  display: none;
+}
+.paginator {
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.paginator > span {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.paginator_active {
+  color: red;
+}
+#page1,
+#page2,
+#page3 {
+  cursor: pointer;
+  background-color: white;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+#page1:hover,
+:focus {
+  background-color: var(--color-light-blue);
+}
+#page2:hover,
+:focus {
+  background-color: var(--color-light-blue);
+}
+#page3:hover,
+:focus {
+  background-color: var(--color-light-blue);
+}
