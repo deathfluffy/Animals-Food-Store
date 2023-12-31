@@ -2,20 +2,20 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://deathfluffy.github.io/animals-food-store-1",
+  "homepage": "https://deathfluffy.github.io/animals-food-store",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /animals-food-store-1/"
+    "build": "parcel build src/*.html --public-url /animals-food-store/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deathfluffy/animals-food-store-1.git"
+    "url": "git+https://github.com/deathfluffy/animals-food-store.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/deathfluffy/animals-food-store-1/issues"
+    "url": "https://github.com/deathfluffy/animals-food-store/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
