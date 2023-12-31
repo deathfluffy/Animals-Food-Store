@@ -1,0 +1,147 @@
+/*? -------------------------- Header -------------------------- */
+.header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: var(--color-light-grey);
+  z-index: 5;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0 5px;
+}
+
+.header-list {
+  display: flex;
+  gap: 6px;
+}
+
+.home-button {
+  width: 77px;
+  height: 38px;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: var(--color-light-blue);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.home-button:hover,
+.home-button:focus {
+  background: var(--color-dark-blue);
+}
+
+.cart-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 30px;
+  background: var(--color-light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-white);
+}
+
+.cart-button:hover,
+.cart-button:focus {
+  background: var(--color-dark-blue);
+}
+
+.cart-text {
+  display: none;
+}
+
+.mobile-cart-text {
+  display: flex;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 17px;
+  height: 17px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  border: solid 1px var(--color-light-blue);
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-button {
+  position: relative;
+}
+
+.mobile-cart-text .cart-item-count {
+  padding: 0;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-dark-blue);
+}
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+.header-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 24px 0px;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .home-button {
+    width: 104px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .cart-button-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cart-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mobile-cart-text {
+    display: none;
+  }
+
+  .cart-text {
+    display: block;
+    color: var(--color-black);
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.33;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header-list {
+    gap: 24px;
+  }
+
+  .mobile-cart-text {
+    display: none;
+  }
+}
