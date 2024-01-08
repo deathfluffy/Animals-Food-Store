@@ -54,6 +54,7 @@ product-list-product__list {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.1;
+  margin-bottom: 5px;
 }
 
 .product-list-info {
@@ -216,7 +217,19 @@ product-list-product__list {
 .is-hidden {
   display: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*? --------------------------Media-------------------------- */
 /* Tablet */
 @media screen and (min-width: 768px) {

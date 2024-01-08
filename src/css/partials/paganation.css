@@ -1,24 +1,4 @@
-.num {
-  display: none;
-}
-.paginator {
-  line-height: 150%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-.paginator > span {
-  display: inline-block;
-  margin-right: 10px;
-  cursor: pointer;
-}
-.paginator_active {
-  color: red;
-}
-#page1,
-#page2,
-#page3 {
+.page-number {
   cursor: pointer;
   background-color: white;
   color: #999;
@@ -30,15 +10,19 @@
   justify-content: center;
   transition: 0.4s ease;
 }
-#page1:hover,
+.page-number:hover,
 :focus {
   background-color: var(--color-light-blue);
 }
-#page2:hover,
-:focus {
-  background-color: var(--color-light-blue);
+.paginator {
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
 }
-#page3:hover,
-:focus {
+
+.page-number.selected {
   background-color: var(--color-light-blue);
+  color: #fff;
 }
